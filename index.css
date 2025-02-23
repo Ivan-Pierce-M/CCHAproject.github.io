@@ -65,6 +65,32 @@ margin: auto;
     min-width: 300px; /* Minimum width to prevent too small resizing */
 }
 
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content, #event {
+        width: 90%; /* Adjust width for mobile view */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust font size for mobile view */
+    }
+
+    p {
+        margin-left: 20px; /* Adjust margin for mobile view */
+    }
+
+    h2, h3 {
+        margin-left: 10px; /* Adjust margin for mobile view */
+    }
+}
+
 #clear {
     clear: both;
 }
