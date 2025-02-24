@@ -4,15 +4,93 @@
 
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="index.css">
-<title>CCHA - Health Conditions</title>
-<h1>CCHA - Health Conditions</h1>
-<div class="Navmenu">
-    <a href="index.html"><button>Home</button></a>
-    <a href="healthcondition.html"><button >Health Conditions</button></a>
-    <a href="tools.html"><button>Tools</button></a>
-    <a href="aboutus.html"><button>About Us</button></a>
+<link rel="stylesheet" href="health.css">
+<meta name="viewport" content="initial-scale=1">
+<title>CCHA Health</title>
+</head>
+
+<body>
+<div id="header"><h1>CCHA Health Conditions</h1>
+    <div class="Navmenu">
+        <a href="index.html"><button>Home</button></a>
+        <a href="healthcondition.html"><button >Health Conditions</button></a>
+        <a href="tools.html"><button>Tools</button></a>
+        <a href="aboutus.html"><button>About Us</button></a>
+    </div>
 </div>
 
+<div id="container">
+    <div id="disease">
+        <h2>Health Conditions</h2>
+        <ul>
+            <li value="0" onclick="disease(value)">Chronic Diseases</li>
+            <li value="1" onclick="disease(value)">Heart Disease</li>
+            <li value="2" onclick="disease(value)">Cancer</li>
+            <li value="3" onclick="disease(value)">Obesity</li>
+            <li value="4" onclick="disease(value)">Diabetes</li>
+            <li value="5" onclick="disease(value)">Asthma</li>
+            <li value="6" onclick="disease(value)">Influenza</li>
+            <li value="7" onclick="disease(value)">HIV/AIDS</li>
+            <li value="8" onclick="disease(value)">Mental Health</li>
+            <li value="9" onclick="disease(value)">Traumatic Brain Injury</li>
+        </ul>
+    </div>
 
+    <div id="description"  style="display: none;">
+            <p class="context">
+                Description of disease goes here
+            </p>
 
+    </div>
+</div>
+
+<script>
+    function disease(value) 
+{
+       var x = value;
+       var desc= ["Chronic Diseases are long-term conditions that require ongoing management and care. They can affect various parts of the body and may lead to serious complications if left untreated.",
+                    "Heart Disease refers to a range of conditions that affect the heart and blood vessels. It is a leading cause of death worldwide and can be prevented through healthy lifestyle choices.",
+                    "Cancer is a group of diseases characterized by the uncontrolled growth and spread of abnormal cells. It can affect any part of the body and is one of the leading causes of death globally.",
+                    "Obesity is a medical condition characterized by excess body fat that can have serious health consequences. It is associated with an increased risk of chronic diseases such as diabetes and heart disease.",
+                    "Diabetes is a chronic condition that affects how the body processes blood sugar. It can lead to serious complications if not managed properly and is a major cause of death worldwide.",
+                    "Asthma is a chronic respiratory condition that causes inflammation and narrowing of the airways. It can lead to difficulty breathing and other symptoms that can be life-threatening if not treated promptly.",
+                    "Influenza, or the flu, is a contagious respiratory illness caused by influenza viruses. It can range from mild to severe and can lead to serious complications, especially in high-risk individuals.",
+                    "HIV/AIDS is a viral infection that attacks the immune system and can lead to serious complications if left untreated. It is a major global health issue that requires ongoing management and care.",
+                    "Mental Health refers to a person's emotional, psychological, and social well-being. It is important for overall health and well-being and can affect how we think, feel, and act.",
+                    "Traumatic Brain Injury (TBI) is a sudden jolt or blow to the head that disrupts normal brain function. It can range from mild to severe and can have long-term effects on cognitive and physical abilities."];
+        var y = document.getElementById("description");
+
+        if(y.style.display === "none")
+            {
+            y.style.display ="block";
+            y.classList.add("animatein");
+             setTimeout(function() {
+                y.classList.remove("animatein");
+                }, 500);
+            }
+        else if (y.style.display === "block" && 
+                    y.innerHTML.includes(desc[x]) ) 
+            {
+            y.classList.add("animateout");
+            setTimeout(function() {
+                y.classList.remove("animateout");
+                y.style.display = "none";    
+            }, 500); 
+            }
+        else
+            {
+            y.style.display ="block";
+            y.classList.add("animatein");
+             setTimeout(function() {
+                y.classList.remove("animatein");
+                }, 500);
+            }
+
+        y.innerHTML = '<p class="context">'+'<h2>What is '
+                    +document.getElementsByTagName('li')[x].innerHTML 
+                    +'</h2>'+ desc[x] + '</p>';
+}
+
+</script>
+</body>
 </html>
