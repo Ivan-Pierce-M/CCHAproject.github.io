@@ -5,15 +5,19 @@
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="about.css">
 <link rel="stylesheet" href="index.css">
-<title>CCHA - About Us</title>
-<h1>CCHA - About Us</h1>
-<div class="Navmenu">
-    <a href="index.html"><button>Home</button></a>
-    <a href="healthcondition.html"><button >Health Conditions</button></a>
-    <a href="tools.html"><button>Tools</button></a>
-    <a href="aboutus.html"><button>About Us</button></a>
-</div>
+<meta name="viewport" content="initial-scale=1">
+<title>CCHA About</title>
+</head>
 
+<body>
+<div id="header"><h1>CCHA About Us</h1>
+    <div class="Navmenu">
+        <a href="index.html"><button>Home</button></a>
+        <a href="healthcondition.html"><button >Health Conditions</button></a>
+        <a href="tools.html"><button>Tools</button></a>
+        <a href="aboutus.html"><button>About Us</button></a>
+    </div>
+</div>
 <div class="statement">
     <h2>Our Mission</h2>
     <p>Our mission is to provide a comprehensive community health awareness platform that empowers individuals to take control of their health and well-being.</p>
@@ -23,21 +27,35 @@
     <p>Our team is made up of dedicated health professionals who are passionate about improving the health and well-being of our community.</p>
 </div>
 
-<div class="contact">
-    <form action=".php">
+<div id="container">
+    <div class="contact">
+        <form action=".php">
   
-    <label for="phone">Enter a phone number</label><br>
-    <input type="tel" id="phone" name="phone" placeholder="Mobile Number" pattern="[0-9]{11}" required>
+            <label for="phone">Enter a phone number</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Mobile Number" pattern="[0-9]{11}" required>
         <br>
-    <label for="email">Email Address</label> <br>
-    <input type="email" id="email" name="email" placeholder="Email Address">
+            <label for="email">Email Address</label> <br>
+            <input type="email" id="email" name="email" placeholder="Email Address">
         <br>
-    <label for="subject">Subject</label><br>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <label for="subject">Subject</label><br>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
         <br>
-    <div class="submit"><input type="submit" value="Submit"></div>
+            <div class="submit"><input type="submit" value="Submit"></div>
   
-    </form>
-  </div> 
+        </form>
+    </div> 
 
+    <div class="lookup">
+            <h2>How to find us</h2>
+            <p>Our office is located at:</p>
+            <p>123 Main Street</p>
+            <p>City, State, Zip Code</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email:</p>
+            <p>Social Media:</p>
+
+    </div>
+</div>
+<div id="clear"></div>
+</body>
 </html>
